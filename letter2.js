@@ -1,33 +1,22 @@
-var input = process.argv[2];
-console.log(input);
+function Letter(value) {
+this.letter = value;
+this.guessed = false;
 
-var Person = function(name) {
-    this.name = name;
-    this.yelling = false;
+this.tostring = function() {
+
+if (this.letter === " ") {
+  this.guessed = true
+  return " ";
+} else if (this.guessed === false) {
+  return "*"
+}else {
+  return this.letter;
+}
+}
+
+this.guess = function(guess){
+  if(guess === this.letter){
+    this.guessed =  true;
   }
-  
-  Person.prototype.toString = function() {
-    var greeting = 'My name is ' + this.name;
-    
-    if(this.yelling) {
-      return greeting.toUpperCase();
-    }
-    
-    return greeting;
-  }
-  
-  var bob = new Person("Bob");
-  
-  // when concatenating with a string, JavaScript automatically calls `toString`
-  console.log(bob + '');
-  bob.yelling = true;
-  console.log(bob + '');
-  
-//   var fred = new Person("Fred");
-//   var sally = new Person("Sally");
-  
-//   var personArray = [bob, fred, sally];
-  
-//   // the same thing happens if we call `join` on a Person array: 
-//     // JavaScript calls `toString` automatially on each person, then joins them together
-//   console.log(personArray.join(', '));
+}
+}

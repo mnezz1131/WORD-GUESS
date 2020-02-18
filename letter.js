@@ -4,17 +4,9 @@
 //   * A function that returns the underlying character if the letter has been guessed, or a placeholder (like an underscore) if the letter has not been guessed
 //   * A function that takes a character as an argument and checks it against the underlying character, updating the stored boolean value to true if it was guessed correctly
 
-// var gtrArray = ["Fender", "Gibson", "Charvel", "Ibanez", "Schecter", "Parker", "Paul Reed Smith", "Epiphone", "ESP", "Gretsch", "Dean", "Rickenbacker", "Jackson", "Taylor", "Martin", "Washburn"]
-// var randomItem = gtrArray[Math.floor(Math.random()*gtrArray.length)];
-// console.log(randomItem);
-// var lowerCase = randomItem.toLowerCase();
-// console.log(lowerCase);
-//  var string = lowerCase.split("");
-//  console.log(string);
-// string.fill("*");
-// console.log(string);
 
-var input = process.argv[2];
+
+// var input = process.argv[2];
 //console.log(input);
 
 function Letter(_string, _boolean) {
@@ -27,7 +19,7 @@ function Letter(_string, _boolean) {
             console.log("The correct letter guess is "+ this.string);
             console.log(this.boolean);
         }else{
-            this.string ="*";
+            this.string = "*";
             this.boolean = false;
             console.log("Incorrect letter guess " + this.string);
             console.log(this.boolean);
@@ -35,8 +27,7 @@ function Letter(_string, _boolean) {
     }
 }
 
-// sets the variables letter to be Letter objects and initializes it 
-var letter = new Letter("t", );
 
-// calling letter guess1 methods
-letter.guess1();
+
+
+module.exports = Letter;
