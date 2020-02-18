@@ -5,3 +5,14 @@
 // * **index.js**: The file containing the logic for the course of the game, which depends on `Word.js` and:
 //   * Randomly selects a word and uses the `Word` constructor to store it
 //   * Prompts the user for each guess and keeps track of the user's remaining guesses
+
+
+var gtrArray = ["Fender", "Gibson", "Charvel", "Ibanez", "Schecter", "Parker", "Paul Reed Smith", "Epiphone", "ESP", "Gretsch", "Dean", "Rickenbacker", "Jackson", "Taylor", "Martin", "Washburn"]
+var randomItem = gtrArray[Math.floor(Math.random()*gtrArray.length)];
+console.log(randomItem);
+var lowerCase = randomItem.toLowerCase();
+console.log(lowerCase);
+ var string = lowerCase.split("");
+ console.log(string);
+string.fill("*");
+console.log(string);
