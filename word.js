@@ -6,13 +6,46 @@
 //   * Randomly selects a word and uses the `Word` constructor to store it
 //   * Prompts the user for each guess and keeps track of the user's remaining guesses
 
+const Letter = require("./letter")
+var input = process.argv[2];
 
-var gtrArray = ["Fender", "Gibson", "Charvel", "Ibanez", "Schecter", "Parker", "Paul Reed Smith", "Epiphone", "ESP", "Gretsch", "Dean", "Rickenbacker", "Jackson", "Taylor", "Martin", "Washburn"]
-var randomItem = gtrArray[Math.floor(Math.random()*gtrArray.length)];
-console.log(randomItem);
-var lowerCase = randomItem.toLowerCase();
-console.log(lowerCase);
- var string = lowerCase.split("");
- console.log(string);
-string.fill("*");
-console.log(string);
+function Word(string){
+    this.letterArray = string.split("")
+    this.letterObjArray = function(){
+        let array = []
+        for(let i = 0; i < letterArray.length; i++){
+            var letter = new Letter(letterArray[i], false);
+            array.push(letter)
+        }
+        return array
+    // console.log(letterObjArray)
+    }
+    this.guess = function(letter){
+        for(let x = 0; x < this.letterObjArray; x++){
+            if(this.letterObjArray[x]['_string'] === letter){
+                this.letterObjArray[x].guess1()
+            }
+        }
+    }
+}
+
+let newWord = Word("monkeys")
+newWord.guess(input)
+
+// var gtrArray = ["Fender", "Gibson", "Charvel", "Ibanez", "Schecter", "Parker", "Paul Reed Smith", "Epiphone", "ESP", "Gretsch", "Dean", "Rickenbacker", "Jackson", "Taylor", "Martin", "Washburn", "Takamine", "Yamaha", ]
+
+// var randomItem = gtrArray[Math.floor(Math.random()*gtrArray.length)];
+// console.log(randomItem);
+// var lowerCase = randomItem.toLowerCase();
+// console.log(lowerCase);
+//  var string = lowerCase.split("");
+//  console.log(string);
+// string.fill("*");
+// console.log(string);
+
+
+// // // sets the variables letter to be Letter objects and initializes it 
+// var letter = new Letter("t", );
+
+// // calling letter guess1 methods
+// letter.guess1();
