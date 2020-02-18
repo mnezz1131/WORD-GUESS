@@ -1,0 +1,23 @@
+{
+  "name": "WORD-GUESS",
+  "version": "1.0.0",
+  "description": "WORD GUESS HOMEWORK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnezz1131/WORD-GUESS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnezz1131/WORD-GUESS/issues"
+  },
+  "homepage": "https://github.com/mnezz1131/WORD-GUESS#readme",
+  "dependencies": {
+    "inquirer": "^7.0.4"
+  }
+}
